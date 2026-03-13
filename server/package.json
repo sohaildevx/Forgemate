@@ -1,10 +1,10 @@
 {
-  "name": "y",
+  "name": "ForgeMate",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "cli-ai-agent": "dist/cli/main.js"
+    "forgemate": "dist/cli/main.js"
   },
   "scripts": {
     "build": "tsc",

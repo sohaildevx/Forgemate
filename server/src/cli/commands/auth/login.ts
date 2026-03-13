@@ -21,7 +21,7 @@ dotenv.config();
 
 const URL = "http://localhost:3005"
 const CLIENT_ID = process.env.GITHUB_CLIENT_ID;
-export const CONFIG_DIR = path.join(os.homedir(), ".cli-ai-agent");
+export const CONFIG_DIR = path.join(os.homedir(), ".forgemate");
 export const TOKEN_FILE:string = path.join(CONFIG_DIR, "token.json");
 
 //Token Management functions
@@ -129,12 +129,12 @@ export async function loginAction(opts:any){
 
        //todo get the user data
 
-       outro(chalk.green("You are now logged in to the CLI AI Agent!"));
+    outro(chalk.green("You are now logged in to ForgeMate CLI!"));
 
        console.log(chalk.gray(`\n Token saved to: ${TOKEN_FILE}`));
 
        console.log(chalk.gray(
-        "You can now use the CLI AI Agent with authenticated requests."
+        "You can now use ForgeMate CLI with authenticated requests."
        ))
 
         
@@ -213,7 +213,7 @@ async function pollForToken(authClient: any, device_code: string, client_id: str
 // Command setup
 
 export const login = new Command("login")
-  .description("Login to the CLI AI Agent")
+    .description("Login to ForgeMate CLI")
   .option("-s, --server-url <url>", "Authentication server URL", URL)
   .option("-c, --client-id <id>", "OAuth Client ID", CLIENT_ID)
   .action(loginAction)

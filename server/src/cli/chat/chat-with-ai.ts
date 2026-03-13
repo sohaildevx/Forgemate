@@ -253,7 +253,7 @@ async function chatLoop(conversation:any){
 export async function startChat(mode: string="chat", conversationId: string | null = null){
     try {
         intro(
-            boxen(chalk.bold.cyan("Cli-Ai-agent"),{
+          boxen(chalk.bold.cyan("ForgeMate"),{
                 padding: 1,
                 borderStyle: 'double',
                 borderColor: 'cyan'

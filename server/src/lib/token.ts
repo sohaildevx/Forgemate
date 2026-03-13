@@ -61,12 +61,12 @@ export async function requireAuth(){
      const token = await getStoredToken();
 
      if(!token){
-        console.log(chalk.red("You are not logged in. Please run 'cli-ai-agent login' to authenticate."));
+        console.log(chalk.red("You are not logged in. Please run 'forgemate login' to authenticate."));
         process.exit(1);
      }
 
      if(await isTokenExpired()){
-        console.log(chalk.yellow("Your token has expired. Please run 'cli-ai-agent login' to re-authenticate."));
+        console.log(chalk.yellow("Your token has expired. Please run 'forgemate login' to re-authenticate."));
         process.exit(1);
      }
 

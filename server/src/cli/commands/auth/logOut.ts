@@ -34,5 +34,5 @@ export async function logOutAction(){
 }
 
 export const logout = new Command("logout")
-.description("Logout from the CLI AI Agent")
+.description("Logout from ForgeMate CLI")
 .action(logOutAction)

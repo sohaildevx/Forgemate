@@ -18,18 +18,18 @@ dotenv.config({ path: path.join(__dirname, '..', '..', '.env') });
 async function main(){
      console.log(
         chalk.cyan(
-            figlet.textSync("CLI-AI-AGENT", { horizontalLayout: "default",
+            figlet.textSync("FORGEMATE", { horizontalLayout: "default",
             font: "Standard"
             })
         )
      )
 
-     console.log(chalk.gray("A Cli AI Agent powered by OpenAI\n"));
+    console.log(chalk.gray("ForgeMate CLI powered by OpenAI\n"));
 
-     const program = new Command("cli-ai-agent");
+     const program = new Command("ForgeMate");
 
-     program.version("1.0.0")
-     .description("A Cli AI Agent powered by OpenAI")
+    program.version("1.0.0")
+    .description("ForgeMate CLI powered by OpenAI")
      .addCommand(login)
      .addCommand(logout)
      .addCommand(whoami)

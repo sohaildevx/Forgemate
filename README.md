@@ -112,7 +112,7 @@ You can run the CLI in a few ways:
 - **Recommended (no install):**
 
   ```bash
-  npx cli-ai-agent --help
+  npx forgemate --help
   ```
 
 - **Local via `node` (after build):**
@@ -126,13 +126,13 @@ Key commands (check `--help` for the latest):
 - **Login**
 
   ```bash
-  npx cli-ai-agent login
+  npx forgemate login
   ```
 
 - **Wake up the agent (entry to chat/agent modes)**
 
   ```bash
-  npx cli-ai-agent wakeUp
+  npx forgemate wakeUp
   ```
 
 Inside the wake‑up flow you can choose:
