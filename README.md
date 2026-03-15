@@ -1,4 +1,4 @@
-## CLI AI Agent Monorepo
+## Forgemate
 
 Command‑line AI assistant and web dashboard built with a Node.js server and a Next.js client.
 
@@ -100,46 +100,73 @@ The HTTP API will start on the port configured in `src/index.ts` (default 3006).
 
 ## CLI Usage
 
-Build the CLI:
+### Build the CLI
 
 ```bash
 cd server
 npm run build
 ```
 
-You can run the CLI in a few ways:
+### Quick Start
 
-- **Recommended (no install):**
+Follow these steps to authenticate and start using the CLI:
 
-  ```bash
-  npx forgemate --help
-  ```
+**1. Start the Backend & Frontend**
 
-- **Local via `node` (after build):**
+In separate terminals:
 
-  ```bash
-  node dist/cli/main.js --help
-  ```
+```bash
+# Terminal 1: Start the backend server
+cd server
+npm start
 
-Key commands (check `--help` for the latest):
+# Terminal 2: Start the frontend client
+cd client
+npm run dev
+```
 
-- **Login**
+The frontend will typically run on `http://localhost:3000`.
 
-  ```bash
-  npx forgemate login
-  ```
+**2. Sign Up via GitHub**
 
-- **Wake up the agent (entry to chat/agent modes)**
+- Open the frontend URL in your browser
+- Sign up or authenticate using your GitHub account
 
-  ```bash
-  npx forgemate wakeUp
-  ```
+**3. Device Code Authentication (CLI Login)**
 
-Inside the wake‑up flow you can choose:
+In a new terminal:
 
-- **Chat**: regular AI chat in the terminal.
-- **Tool**: chat with tool calling (e.g Google Search, real time news and many more).
-- **Agent**: application‑generator mode.
+```bash
+cd server
+npx forgemate login
+```
+
+The command will display:
+- A device authentication URL
+- A **6-character code** (digits + letters)
+
+Copy the code and:
+1. Go back to the frontend URL in your browser
+2. Paste the code into the device authentication box
+3. Confirm the authentication
+
+**4. Wait for Confirmation**
+
+After authentication succeeds, you'll see a login confirmation message in your terminal.
+
+**5. Wake Up the Agent**
+
+```bash
+npx forgemate wakeup
+```
+
+This will display **3 available modes**:
+
+- **Chat**: regular AI conversation in the terminal
+- **Tool**: chat with tool calling (e.g., web search, real-time news, etc.)
+- **Agent**: application generator mode (scaffold full projects from descriptions)
+
+Select your desired mode and start interacting!
 
 ---
 
