@@ -138,7 +138,7 @@ In a new terminal:
 
 ```bash
 cd server
-npx forgemate login
+forgemate login
 ```
 
 The command will display:
@@ -157,7 +157,7 @@ After authentication succeeds, you'll see a login confirmation message in your t
 **5. Wake Up the Agent**
 
 ```bash
-npx forgemate wakeup
+forgemate wakeup
 ```
 
 This will display **3 available modes**:
